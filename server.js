@@ -7,7 +7,7 @@ const express = require('express'), // framework nodejs
 const app = express();
 
 app.use(cors({
-    origin: 'https://lucapanariello.altervista.org/'
+    origin: 'https://lucapanariello.altervista.org/api/comment'
 }))
 app.use(express.json()); // built-in middleware
 

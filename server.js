@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 // every request calls a different script based on its path
 //app.use(express.static(__dirname)); // static calls
-app.use('/api/coach', restcomment);
+app.use('/api/comment', restcomment);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -6,7 +6,9 @@ const express = require('express'), // framework nodejs
     url = process.env.DB_URI; // remote db connection string
 const app = express();
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://lucapanariello.altervista.org/'
+}))
 app.use(express.json()); // built-in middleware
 
 const connOpts = {

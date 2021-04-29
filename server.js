@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express'), // framework nodejs
     mongoose = require('mongoose'), // framework mongoDB 
+    cors = require('cors'),
     restcomment = require('./routes/restcomment'),
     url = process.env.DB_URI; // remote db connection string
 const app = express();

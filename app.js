@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express'), // framework nodejs
   mongoose = require('mongoose'), // framework mongoDB
+  compression = require('compression'),
   helmet = require('helmet'),
   cors = require('cors'),
   restcomment = require('./routes/restcomment'),
@@ -18,6 +19,7 @@ const express = require('express'), // framework nodejs
 const app = express();
 
 app.use(helmet());
+app.use(compression());
 app.use(cors(corsOpt));
 app.use(express.json()); // built-in middleware
 //app.use(express.static(__dirname)); // static calls

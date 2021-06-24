@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 // ----- USERS -----
 const commentSchema = Schema({
-    name: { type: String, required: true },
-    mail: { type: String, default: '' },
-    content: { type: String, required: true}
+  name: { type: String, required: true },
+  mail: { type: String, default: '' },
+  content: { type: String, required: true },
 });
 
 const Comment = mongoose.model('comment', commentSchema);

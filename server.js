@@ -1,31 +1,35 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express'), // framework nodejs
-    mongoose = require('mongoose'), // framework mongoDB 
-    cors = require('cors'),
-    restcomment = require('./routes/restcomment'),
-    url = process.env.DB_URI; // remote db connection string
-const app = express();
-
-app.use(cors({
-    origin: 'https://lucapanariello.altervista.org'
-}))
-app.use(express.json()); // built-in middleware
-
-const connOpts = {
+  mongoose = require('mongoose'), // framework mongoDB
+  helmet = require('helmet'),
+  cors = require('cors'),
+  restcomment = require('./routes/restcomment'),
+  url = process.env.DB_URI, // remote db connection string
+  connOpts = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    useCreateIndex: true
-}
+    useCreateIndex: true,
+  },
+  corsOpt = {
+    origin: 'https://lucapanariello.altervista.org',
+    optionsSuccessStatus: 200,
+  };
+const app = express();
+
+app.use(helmet());
+app.use(cors(corsOpt));
+app.use(express.json()); // built-in middleware
 
 // connection to db
-mongoose.connect(url, connOpts)
-    .then(() => console.log('Connected to MongoDB...'))
-    .catch(err => console.error('Could not connect to MongoDB...', err));
+mongoose
+  .connect(url, connOpts)
+  .then(() => console.log('Connected to MongoDB...'))
+  .catch((err) => console.error('Could not connect to MongoDB...', err));
 
 // in case of web request
 app.get('/', (req, res) => {
-    res.send('Luca\' Portfolio Web Service');
+  res.send("Luca' Portfolio Web Service");
 });
 
 // every request calls a different script based on its path

@@ -5,14 +5,14 @@ const express = require('express'), // framework nodejs
   cors = require('cors'),
   restcomment = require('./routes/restcomment'),
   url = process.env.DB_URI, // remote db connection string
+  port = process.env.PORT || 3000,
   connOpts = {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
     useCreateIndex: true,
+    autoIndex: false,
   },
   corsOpt = {
-    origin: 'https://lucapanariello.altervista.org',
+    origin: process.env.ORIGIN_URI,
     optionsSuccessStatus: 200,
   };
 const app = express();
@@ -20,6 +20,8 @@ const app = express();
 app.use(helmet());
 app.use(cors(corsOpt));
 app.use(express.json()); // built-in middleware
+//app.use(express.static(__dirname)); // static calls
+app.use('/api/comment', restcomment);
 
 // connection to db
 mongoose
@@ -28,13 +30,6 @@ mongoose
   .catch((err) => console.error('Could not connect to MongoDB...', err));
 
 // in case of web request
-app.get('/', (req, res) => {
-  res.send("Luca' Portfolio Web Service");
-});
+app.get('/', (req, res) => res.send("Luca's Portfolio Web Service"));
 
-// every request calls a different script based on its path
-//app.use(express.static(__dirname)); // static calls
-app.use('/api/comment', restcomment);
-
-const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

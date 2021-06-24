@@ -2,7 +2,7 @@
   "name": "lucapersonalbe",
   "version": "1.0.0",
   "description": "simple backend for my personal page",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",

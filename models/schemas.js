@@ -1,5 +1,6 @@
-const mongoose = require('mongoose'); // MongoDB framework
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+// MongoDB framework
+const { Schema } = mongoose;
 
 // ----- USERS -----
 const commentSchema = Schema({

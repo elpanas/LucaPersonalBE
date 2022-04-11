@@ -1,11 +1,13 @@
+/* eslint-disable no-console */
 require('./db/db'); // DATABASE CONNECTIONS
-const express = require('express'); // FRAMEWORK
-const app = express(),
-  config = require('./config/config'), // CONFIGURATIONS
-  compression = require('compression'), // MIDDLEWARES
-  helmet = require('helmet'),
-  cors = require('cors'),
-  restcomment = require('./routes/restcomment'); // ROUTES
+const express = require('express');
+// FRAMEWORK
+const app = express();
+const compression = require('compression'); // MIDDLEWARES
+const helmet = require('helmet');
+const cors = require('cors');
+const config = require('./config/config'); // CONFIGURATIONS
+const restcomment = require('./routes/restcomment'); // ROUTES
 
 // MIDDLEWARE APPLICATIONS
 app.use(helmet());

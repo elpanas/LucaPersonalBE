@@ -19,7 +19,7 @@ app.use(express.json());
 app.use('/api/comment', restcomment);
 
 // in case of web request
-app.get('/', (req, res) => res.send("Luca's Portfolio Web Service"));
+app.get('/', (req, res) => res.send("Luca's Personal Page Web Service"));
 
 app.listen(config.app.port, () =>
   console.log(`Listening on port ${config.app.port}...`)

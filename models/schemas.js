@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// MongoDB framework
+
 const { Schema } = mongoose;
 
 // ----- USERS -----

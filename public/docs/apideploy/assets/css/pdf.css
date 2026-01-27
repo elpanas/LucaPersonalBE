@@ -1,0 +1,11 @@
+@page {
+  size: A4;
+  margin: 20mm;
+
+  /* Footer a destra con numero di pagina */
+  @bottom-center {
+    content: "Pagina " counter(page) " di " counter(pages);
+    font-size: 10pt;
+    color: gray;
+  }
+}

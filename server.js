@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 require('./db/db'); // DATABASE CONNECTIONS
 const express = require('express');
+const path = require('path');
 // FRAMEWORK
 const app = express();
 const compression = require('compression'); // MIDDLEWARES
@@ -14,6 +15,18 @@ app.use(helmet());
 app.use(compression());
 app.use(cors(config.corsOpt));
 app.use(express.json());
+
+// Serve la doc Python
+app.use('/apipy', express.static(path.join(__dirname, 'public/site/apipy')));
+app.get('/apipy/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/site/apipy/index.html'));
+});
+
+// Serve la doc Node
+app.use('/apideploy', express.static(path.join(__dirname, 'public/site/apideploy')));
+app.get('/apideploy/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/site/apideploy/index.html'));
+});
 
 // ROUTES
 app.use('/api/comment', restcomment);

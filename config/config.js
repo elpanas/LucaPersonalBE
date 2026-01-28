@@ -14,7 +14,8 @@ const config = {
     },
   },
   corsOpt: {
-    origin: process.env.ORIGIN_URI,
+    origin: 'https://lucapanariello.altervista.org',
+    methods: ['GET', 'POST', 'OPTIONS'],
     optionsSuccessStatus: 200,
   },
 };

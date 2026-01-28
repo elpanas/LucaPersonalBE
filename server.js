@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const config = require('./config/config'); // CONFIGURATIONS
 const restcomment = require('./routes/restcomment'); // ROUTES
+const authroute = require('./routes/authroute');
 
 // MIDDLEWARE APPLICATIONS
 app.use(helmet());
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/docs', express.static(path.join(__dirname, 'public/docs')));
 
 // ROUTES
+app.use('/api/login', authroute);
 app.use('/api/comment', restcomment);
 
 // Normalizza /docs → /docs/

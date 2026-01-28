@@ -1,8 +1,7 @@
 // controllers/auth.controller.js
 const User = require("../models/user");
 
-module.exports = {    
-    login: async (req, res) => {
+exports.login = async (req, res) => {
       try {
         const { username, password } = req.body;
 
@@ -21,5 +20,4 @@ module.exports = {
         // console.error(err);
         return res.status(500).json({ message: "Server error" });
       }
-    },
-};
+    };

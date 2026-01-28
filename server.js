@@ -15,8 +15,6 @@ app.use(compression());
 app.use(cors(config.corsOpt));
 app.use(express.json());
 
-console.log('CORS origin:', config.corsOpt.origin);
-
 // ROUTES
 app.use('/api/comment', restcomment);
 

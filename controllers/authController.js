@@ -10,7 +10,7 @@ exports.login = async (req, res) => {
           return res.status(401).json({ message: "Wrong credentials" });
         }
 
-        const ok = atob(password) === user.password;
+        const ok = btoa(password) === user.password;
         if (!ok) {
           return res.status(401).json({ message: "Wrong credentials" });
         }

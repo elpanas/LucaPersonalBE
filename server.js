@@ -18,6 +18,11 @@ app.use(express.json());
 
 // Serve la doc Python
 app.use('/docs', express.static(path.join(__dirname, 'public/docs')));
+
+app.get('/docs', (req, res) => {
+  res.redirect('/docs/');
+});
+
 app.get('/docs/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/docs/index.html'));
 });

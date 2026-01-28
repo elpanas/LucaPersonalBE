@@ -17,14 +17,14 @@ app.use(cors(config.corsOpt));
 app.use(express.json());
 
 // Serve la doc Python
-app.use('/apipy', express.static(path.join(__dirname, 'public/site/apipy')));
-app.get('/apipy/*', (req, res) => {
+app.use('/docs/apipy', express.static(path.join(__dirname, 'public/site/apipy')));
+app.get('/docs/apipy/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/site/apipy/index.html'));
 });
 
 // Serve la doc Node
-app.use('/apideploy', express.static(path.join(__dirname, 'public/site/apideploy')));
-app.get('/apideploy/*', (req, res) => {
+app.use('/docs/apideploy', express.static(path.join(__dirname, 'public/site/apideploy')));
+app.get('/docs/apideploy/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/site/apideploy/index.html'));
 });
 

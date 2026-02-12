@@ -1223,7 +1223,7 @@ Il comando <code>restart</code> riavvia il servizio in caso di errore a meno che
       - kpnet    
     restart: unless-stopped
 </code></pre>
-<p>Alla rete è stato specificato l'indirizzo parziale della subnet, in modo da assicurare l'accesso da e per servizi esterni (come MySQL):</p>
+<p>Nelle impostazioni della rete è stato specificato l'indirizzo parziale della subnet, in modo da assicurare l'accesso da e per servizi esterni (come MySQL):</p>
 <pre><code class="language-yaml">networks: 
   kpnet: # rete interna tra container
     driver: bridge # i container possono comunicare tra loro usando il nome del servizio come hostname

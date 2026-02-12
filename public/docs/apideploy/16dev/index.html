@@ -1237,7 +1237,7 @@ Sono stati aggiunti limiti alle risorse utilizzabili dai singoli servizi.</p>
     pids_limit: 128
     restart: unless-stopped # riavvia a meno che non stoppato manualmente
 </code></pre>
-<p>Alla rete è stato specificato l'indirizzo parziale della subnet, in modo da assicurare l'accesso da e per servizi esterni (come MySQL)</p>
+<p>Nelle impostazioni della rete è stato specificato l'indirizzo parziale della subnet, in modo da assicurare l'accesso da e per servizi esterni (come MySQL)</p>
 <pre><code class="language-yaml">networks: 
   kpnet_dev: # rete interna tra container
     driver: bridge # i container possono comunicare tra loro usando il nome del servizio come hostname
@@ -1246,7 +1246,7 @@ Sono stati aggiunti limiti alle risorse utilizzabili dai singoli servizi.</p>
       config:
         - subnet: 172.19.0.0/16
 </code></pre>
-<p>La differenza nei nomi e nella subnet permette agli ambienti (main e dev) di coesistere in sicurezza.</p>
+<p>La differenza nei nomi e nella subnet (172.18... e 172.19...) permette agli ambienti main e dev di coesistere in sicurezza.</p>
 <h2 id="nuovi-jobs">Nuovi jobs</h2>
 <p>Nel file deploy.yml (comune agli ambienti) è stato aggiunto un job che si attiva in fase di merging da dev a main. Una volta conclusa l'operazione di merging, l'ambiene di dev verrà "spento" in modo da risparmiare risorse... fino al successivo push di modifiche sul branch dev.</p>
 <pre><code class="language-yaml">shutdown_dev: # job per spegnere l'ambiente di sviluppo quando si fa merge su main

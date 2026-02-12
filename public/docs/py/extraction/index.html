@@ -1,0 +1,4364 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../apipy/assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Extraction - Rehab 3.0 - Documentazione</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#extractkp.extraction.kp_ampiezze" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rehab 3.0 - Documentazione" class="md-header__button md-logo" aria-label="Rehab 3.0 - Documentazione" data-md-component="logo">
+      
+  <img src="../../apipy/assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rehab 3.0 - Documentazione
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extraction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rehab 3.0 - Documentazione" class="md-nav__button md-logo" aria-label="Rehab 3.0 - Documentazione" data-md-component="logo">
+      
+  <img src="../../apipy/assets/images/logo.png" alt="logo">
+
+    </a>
+    Rehab 3.0 - Documentazione
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/02api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endpoints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/04extraction_extract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrazione keypoints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funzioni
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Funzioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/05extraction_ampiezze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calcolo ampiezze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/06extraction_angoli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calcolo angoli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/07extraction_simmetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calcolo simmetrie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/08extraction_save/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salvataggio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apipy/utils.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/00intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduzione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azioni principali
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Azioni principali
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/02checkout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkout repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/03load_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caricamento configurazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/04ssh_deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH e deploy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/05backup_volumes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup dei volumi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/06backup_images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup delle immagini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/07update_repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggiorna repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/08stop_containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stop vecchi container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/09build_start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build & Avvio dei nuovi container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/10healthcheck_rollback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Healthcheck e rollback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/11funzioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funzioni accessorie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/12dockerfilenode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dockerfile API Node.js
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/13dockerfilepy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dockerfile API Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/14caddy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caddy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apideploy/15compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker compose e microservizi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_ampiezze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_ampiezze
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_ampiezze.calcola_altezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcola_altezza
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_ampiezze.calcola_ampiezza_falcata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcola_ampiezza_falcata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_ampiezze.calcola_lunghezza_passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcola_lunghezza_passo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_angoli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_angoli
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_angoli.angolo_tra_vettori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        angolo_tra_vettori
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_angoli.calcola_angoli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcola_angoli
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_angoli.converti_keypoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converti_keypoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_extract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.extract_frame_ffmpeg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_frame_ffmpeg
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.extract_frame_opencv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_frame_opencv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.extract_frames_from_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_frames_from_video
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.extract_keypoints_from_frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_keypoints_from_frame
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.is_all_keypoints_zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is_all_keypoints_zero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.kp_extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_extraction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.save_keypoints_list_to_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save_keypoints_list_to_csv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.save_keypoints_list_to_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save_keypoints_list_to_json
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_extract.save_keypoints_to_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save_keypoints_to_csv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_save
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_save.save_full_keypoints_to_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save_full_keypoints_to_csv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_simmetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kp_simmetry
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extractkp.extraction.kp_simmetry.calcolo_simmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcolo_simmetrie
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Extraction</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="extractkp.extraction.kp_ampiezze"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_ampiezze.calcola_altezza" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcola_altezza</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola l'altezza del soggetto rispetto alla media delle caviglie.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti dal frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Altezza del soggetto rispetto alla media delle caviglie</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_ampiezze.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcola_altezza</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>        
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola l&#39;altezza del soggetto rispetto alla media delle caviglie.</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti dal frame</span>
+
+<span class="sd">    Returns:    </span>
+<span class="sd">        (float): Altezza del soggetto rispetto alla media delle caviglie</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">nose_y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nose_y&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">lankle_y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LAnkle_y&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">rankle_y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RAnkle_y&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">media_caviglie_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">lankle_y</span> <span class="o">+</span> <span class="n">rankle_y</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">altezza</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">nose_y</span> <span class="o">-</span> <span class="n">media_caviglie_y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">altezza</span> <span class="k">if</span> <span class="n">altezza</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">1e-6</span>  <span class="c1"># per evitare divisioni per 0</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_ampiezze.calcola_ampiezza_falcata" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcola_ampiezza_falcata</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola l'ampiezza falcata del passo rispetto all'altezza del soggetto.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti dal frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ampiezza falcata del passo rispetto all'altezza del soggetto</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_ampiezze.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcola_ampiezza_falcata</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola l&#39;ampiezza falcata del passo rispetto all&#39;altezza del soggetto.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti dal frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): Ampiezza falcata del passo rispetto all&#39;altezza del soggetto</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x_dx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RAnkle_x&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">y_dx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RAnkle_y&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">x_sx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LAnkle_x&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">y_sx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LAnkle_y&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="n">altezza</span> <span class="o">=</span> <span class="n">calcola_altezza</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">altezza</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+
+    <span class="n">ampiezza</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x_dx</span> <span class="o">-</span> <span class="n">x_sx</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y_dx</span> <span class="o">-</span> <span class="n">y_sx</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ampiezza</span> <span class="o">/</span> <span class="n">altezza</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_ampiezze.calcola_lunghezza_passo" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcola_lunghezza_passo</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola la lunghezza del passo di un frame video dato il dizionario dei keypoints</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti dal frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Lunghezza del passo in pixel</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_ampiezze.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcola_lunghezza_passo</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola la lunghezza del passo di un frame video dato il dizionario dei keypoints</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti dal frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): Lunghezza del passo in pixel</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Coordinate caviglie</span>
+    <span class="n">x_dx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RAnkle_x&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">x_sx</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LAnkle_x&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="c1"># Altezza stimata come distanza verticale tra naso e media caviglie</span>
+    <span class="n">altezza</span> <span class="o">=</span> <span class="n">calcola_altezza</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">altezza</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+
+    <span class="n">lunghezza</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x_dx</span> <span class="o">-</span> <span class="n">x_sx</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lunghezza</span> <span class="o">/</span> <span class="n">altezza</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="extractkp.extraction.kp_angoli"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_angoli.angolo_tra_vettori" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola l'angolo tra i vettori AB e BC</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>A</code>
+            </td>
+            <td>
+                  <code><span title="array">array</span> - <span title="like">like</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Punto A</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>B</code>
+            </td>
+            <td>
+                  <code><span title="array">array</span> - <span title="like">like</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Punto B</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>C</code>
+            </td>
+            <td>
+                  <code><span title="array">array</span> - <span title="like">like</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Punto C</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Angolo tra AB e BC in gradi</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_angoli.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">angolo_tra_vettori</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola l&#39;angolo tra i vettori AB e BC</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        A (array-like): Punto A</span>
+<span class="sd">        B (array-like): Punto B</span>
+<span class="sd">        C (array-like): Punto C</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): Angolo tra AB e BC in gradi</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">AB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">CB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+    <span class="n">cosine_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">AB</span><span class="p">,</span> <span class="n">CB</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">AB</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">CB</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-6</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">cosine_angle</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_angoli.calcola_angoli" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcola_angoli</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola gli angoli di diverse articolazioni del corpo a partire
+dai keypoints estratti da un frame video</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints_raw</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti dal frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con gli angoli delle articolazioni del corpo</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_angoli.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcola_angoli</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola gli angoli di diverse articolazioni del corpo a partire</span>
+<span class="sd">    dai keypoints estratti da un frame video</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints_raw (dict): Dizionario con i keypoints estratti dal frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict): Dizionario con gli angoli delle articolazioni del corpo</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">converti_keypoints</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">)</span>
+
+    <span class="c1"># Angoli solo dove sono disponibili 3 punti</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="c1"># Ginocchia</span>
+        <span class="s2">&quot;flessione_ginocchio_dx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;RHip&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RKnee&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RAnkle&quot;</span><span class="p">]),</span>
+        <span class="s2">&quot;flessione_ginocchio_sx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;LHip&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LKnee&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LAnkle&quot;</span><span class="p">]),</span>
+
+        <span class="c1"># Anche</span>
+        <span class="s2">&quot;flessione_anca_dx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;RShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RHip&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RKnee&quot;</span><span class="p">]),</span>
+        <span class="s2">&quot;flessione_anca_sx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;LShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LHip&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LKnee&quot;</span><span class="p">]),</span>
+
+        <span class="c1"># Gomiti</span>
+        <span class="s2">&quot;flessione_gomito_dx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;RShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RElbow&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RWrist&quot;</span><span class="p">]),</span>
+        <span class="s2">&quot;flessione_gomito_sx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;LShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LElbow&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LWrist&quot;</span><span class="p">]),</span>
+
+        <span class="c1"># Spalle</span>
+        <span class="s2">&quot;abduzione_spalla_dx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;RElbow&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;RHip&quot;</span><span class="p">]),</span>
+        <span class="s2">&quot;abduzione_spalla_sx&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;LElbow&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LShoulder&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;LHip&quot;</span><span class="p">]),</span>
+
+        <span class="c1"># Collo (stimato come punto medio tra le spalle)</span>
+        <span class="s2">&quot;inclinazione_collo&quot;</span><span class="p">:</span> <span class="n">angolo_tra_vettori</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="s2">&quot;LEar&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;neck&quot;</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="s2">&quot;REar&quot;</span><span class="p">]),</span>
+    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_angoli.converti_keypoints" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">converti_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Converte un dizionario raw tipo {'LHip_x': ..., 'LHip_y': ...}
+in un dizionario con coordinate (x, y) per punto del corpo</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti dal frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con le coordinate (x, y) per punto del corpo</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_angoli.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">converti_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converte un dizionario raw tipo {&#39;LHip_x&#39;: ..., &#39;LHip_y&#39;: ...}</span>
+<span class="sd">    in un dizionario con coordinate (x, y) per punto del corpo</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti dal frame</span>
+
+<span class="sd">    Returns: </span>
+<span class="sd">        (dict): Dizionario con le coordinate (x, y) per punto del corpo</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">convertito</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">):</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">k</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">_x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">_y&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">convertito</span><span class="p">[</span><span class="n">base</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">convertito</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="extractkp.extraction.kp_extract"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.extract_frame_ffmpeg" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">extract_frame_ffmpeg</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Utilizza ffmpeg per estrarre il frame specificato dal video.
+Se il frame non esiste, restituisce None.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>video_path</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del video da cui estrarre il frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>frame_number</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Numero del frame da estrarre</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cap</code>
+            </td>
+            <td>
+                  <code><span title="cv2.VideoCapture">VideoCapture</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Oggetto OpenCV VideoCapture per il video specificato</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Un array BGR rappresentante l'immagine estratta, o None se il frame non esiste.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_frame_ffmpeg</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utilizza ffmpeg per estrarre il frame specificato dal video.</span>
+<span class="sd">    Se il frame non esiste, restituisce None.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        video_path (str): Percorso del video da cui estrarre il frame</span>
+<span class="sd">        frame_number (int): Numero del frame da estrarre</span>
+<span class="sd">        cap (cv2.VideoCapture): Oggetto OpenCV VideoCapture per il video specificato</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (Optional[np.ndarray]): Un array BGR rappresentante l&#39;immagine estratta, o None se il frame non esiste.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. Ottieni fps per calcolare il timestamp</span>
+    <span class="n">fps</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">)</span>
+
+    <span class="c1"># Calcola il timestamp (in secondi)</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">frame_number</span> <span class="o">/</span> <span class="n">fps</span>
+
+    <span class="c1"># 2. Costruisci il comando ffmpeg</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;ffmpeg&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;-ss&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>   <span class="c1"># seek al timestamp</span>
+        <span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="n">video_path</span><span class="p">,</span>            <span class="c1"># video di input</span>
+        <span class="s1">&#39;-frames:v&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>            <span class="c1"># estrai un solo frame</span>
+        <span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;image2pipe&#39;</span><span class="p">,</span>          <span class="c1"># formato pipe</span>
+        <span class="s1">&#39;-vcodec&#39;</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span>            <span class="c1"># codec di output</span>
+        <span class="s1">&#39;-&#39;</span>                          <span class="c1"># stdout</span>
+    <span class="p">]</span>
+
+    <span class="c1"># 3. Esegui il comando e leggi i byte PNG da stdout</span>
+    <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">)</span>
+    <span class="n">raw_image</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">raw_image</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Errore: Frame </span><span class="si">{</span><span class="n">frame_number</span><span class="si">}</span><span class="s2"> non trovato in </span><span class="si">{</span><span class="n">video_path</span><span class="si">}</span><span class="s2"> (ffmpeg)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># 4. Decodifica il PNG in un array BGR con OpenCV</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">raw_image</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imdecode</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_COLOR</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Errore: impossibile decodificare il frame </span><span class="si">{</span><span class="n">frame_number</span><span class="si">}</span><span class="s2"> di </span><span class="si">{</span><span class="n">video_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.extract_frame_opencv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">extract_frame_opencv</span><span class="p">(</span><span class="n">video</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Utilizza OpenCV per estrarre il frame specificato dal video.
+Se il frame non esiste, restituisce None.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>video</code>
+            </td>
+            <td>
+                  <code><span title="cv2.VideoCapture">VideoCapture</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Video da cui estrarre il frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>frame_number</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Numero del frame da estrarre</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frame estratto (None se non esiste)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_frame_opencv</span><span class="p">(</span><span class="n">video</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utilizza OpenCV per estrarre il frame specificato dal video.</span>
+<span class="sd">    Se il frame non esiste, restituisce None.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        video (cv2.VideoCapture): Video da cui estrarre il frame</span>
+<span class="sd">        frame_number (int): Numero del frame da estrarre</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (numpy.ndarray): Frame estratto (None se non esiste)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">video</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_POS_FRAMES</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+    <span class="n">success</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">video</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">frame</span>
+    <span class="c1"># print(f&quot;Errore: Frame {frame_number} non trovato in {video_path} (opencv)&quot;)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.extract_frames_from_video" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">extract_frames_from_video</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">video_frames_dir</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Utilizza ffmpeg per estrarre i frame dal video. Se il video non esiste, restituisce False.
+Se si verifica un errore durante l'estrazione, restituisce False.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>video_path</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del video da elaborare</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>video_frames_dir</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso della cartella dove salvare i frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True se l'estrazione va a buon fine, False altrimenti</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_frames_from_video</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">video_frames_dir</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utilizza ffmpeg per estrarre i frame dal video. Se il video non esiste, restituisce False.</span>
+<span class="sd">    Se si verifica un errore durante l&#39;estrazione, restituisce False.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        video_path (str): Percorso del video da elaborare</span>
+<span class="sd">        video_frames_dir (str): Percorso della cartella dove salvare i frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (bool): True se l&#39;estrazione va a buon fine, False altrimenti</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
+            <span class="s2">&quot;ffmpeg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-i&quot;</span><span class="p">,</span> <span class="n">video_path</span><span class="p">,</span>         <span class="c1"># input</span>
+            <span class="s2">&quot;-q:v&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>              <span class="c1"># qualità JPEG (1-31, più piccolo = migliore)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">video_frames_dir</span><span class="p">,</span> <span class="s2">&quot;frame_</span><span class="si">%05d</span><span class="s2">.jpg&quot;</span><span class="p">)</span>
+        <span class="p">])</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Errore: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>    
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.extract_keypoints_from_frame" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">extract_keypoints_from_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="n">pose</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Utilizza MediaPipe per estrarre i keypoints dal frame specificato.
+Se il frame non esiste, restituisce None.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>frame</code>
+            </td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Array BGR rappresentante l'immagine estratta</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>frame_number</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Numero del frame estratto</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>fps</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Numero di frame al secondo</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pose</code>
+            </td>
+            <td>
+                  <code><span title="extractkp.extraction.kp_extract.mp_pose.Pose">Pose</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Oggetto MediaPipe per l'estrazione dei keypoints</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario contenente i keypoints estratti</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_keypoints_from_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utilizza MediaPipe per estrarre i keypoints dal frame specificato.</span>
+<span class="sd">    Se il frame non esiste, restituisce None.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        frame (numpy.ndarray): Array BGR rappresentante l&#39;immagine estratta</span>
+<span class="sd">        frame_number (int): Numero del frame estratto</span>
+<span class="sd">        fps (float): Numero di frame al secondo</span>
+<span class="sd">        pose (mp_pose.Pose): Oggetto MediaPipe per l&#39;estrazione dei keypoints</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict): Dizionario contenente i keypoints estratti</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">))</span>
+
+    <span class="c1"># Inizializza dizionario con 0</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># --- metadati temporali ---</span>
+        <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">frame_number</span><span class="p">,</span>
+        <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">frame_number</span> <span class="o">/</span> <span class="n">fps</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="n">fps</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s1">&#39;fps&#39;</span><span class="p">:</span> <span class="n">fps</span><span class="p">,</span>
+        <span class="s1">&#39;mean_visibility&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+
+        <span class="c1"># --- keypoints 2D ---</span>
+        <span class="s1">&#39;nose_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;nose_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;neck_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;neck_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RShoulder_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RShoulder_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RElbow_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RElbow_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RWrist_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RWrist_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LShoulder_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LShoulder_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LElbow_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LElbow_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LWrist_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LWrist_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RHip_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RHip_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RKnee_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RKnee_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;RAnkle_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;RAnkle_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LHip_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LHip_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LKnee_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LKnee_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LAnkle_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LAnkle_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;REye_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;REye_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LEye_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LEye_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;REar_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;REar_y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;LEar_x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;LEar_y&#39;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">pose_landmarks</span><span class="p">:</span>
+        <span class="n">lm</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">pose_landmarks</span><span class="o">.</span><span class="n">landmark</span>
+
+        <span class="c1"># Calcola la visibilità media (confidence globale)</span>
+        <span class="n">visibilities</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">visibility</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lm</span><span class="p">]</span>
+        <span class="n">keypoints</span><span class="p">[</span><span class="s1">&#39;mean_visibility&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">visibilities</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">visibilities</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">mp_index</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lm</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lm</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+                <span class="n">keypoints</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+                <span class="n">keypoints</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+
+        <span class="c1"># Calcolo del collo come punto medio tra le spalle (opzionale)</span>
+        <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">pose_landmarks</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">l_sh</span> <span class="o">=</span> <span class="n">lm</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
+                <span class="n">r_sh</span> <span class="o">=</span> <span class="n">lm</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>
+                <span class="n">neck_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">l_sh</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">r_sh</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span>
+                <span class="n">neck_y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">l_sh</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">r_sh</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+                <span class="n">keypoints</span><span class="p">[</span><span class="s1">&#39;neck_x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">neck_x</span>
+                <span class="n">keypoints</span><span class="p">[</span><span class="s1">&#39;neck_y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">neck_y</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">keypoints</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.is_all_keypoints_zero" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">is_all_keypoints_zero</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Controlla se tutti i keypoints sono zero.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True se tutti i keypoints sono zero, False altrimenti</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">is_all_keypoints_zero</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Controlla se tutti i keypoints sono zero.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (bool): True se tutti i keypoints sono zero, False altrimenti</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># coords = [v for k, v in keypoints.items() if k not in (&#39;pathology&#39;)]</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">v</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">v</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.kp_extraction" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">kp_extraction</span><span class="p">(</span><span class="n">video_frames_dir</span><span class="p">,</span> <span class="n">video_path</span><span class="p">,</span> <span class="n">output_temp_csv</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Estrae i keypoints dai frame di un video utilizzando Mediapipe e li salva in un file JSON.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>video_frames_dir</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso della cartella contenente i frame</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>video_path</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del video da elaborare</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_temp_csv</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del file JSON dove salvare i keypoints</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="tuple">tuple</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>(success: bool, code: 0) OK,
+(success: bool, code: 1) Errore generico
+(success: bool, code: 2) Video non trovato
+(success: bool, code: 3) Troppi frame illeggibili
+(success: bool, code: 4) File non trovato</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">kp_extraction</span><span class="p">(</span><span class="n">video_frames_dir</span><span class="p">,</span> <span class="n">video_path</span><span class="p">,</span> <span class="n">output_temp_csv</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estrae i keypoints dai frame di un video utilizzando Mediapipe e li salva in un file JSON.</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        video_frames_dir (str): Percorso della cartella contenente i frame</span>
+<span class="sd">        video_path (str): Percorso del video da elaborare</span>
+<span class="sd">        output_temp_csv (str): Percorso del file JSON dove salvare i keypoints</span>
+
+<span class="sd">    Returns:     </span>
+<span class="sd">        (tuple):</span>
+<span class="sd">            (success: bool, code: 0) OK,</span>
+<span class="sd">            (success: bool, code: 1) Errore generico</span>
+<span class="sd">            (success: bool, code: 2) Video non trovato</span>
+<span class="sd">            (success: bool, code: 3) Troppi frame illeggibili</span>
+<span class="sd">            (success: bool, code: 4) File non trovato</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">MAX_TOTAL_ERRORS_PERCENTAGE</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># 10% dei frame totali</span>
+    <span class="n">MAX_GAP_SECONDS</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># percentuale in secondi del video   </span>
+
+    <span class="n">buffer</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">total_frame_error_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">consecutive_frame_error_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># VIDEO SINGOLO</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">video_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Video non trovato</span>
+
+    <span class="n">fps</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">)</span> <span class="c1"># Ottieni FPS</span>
+    <span class="n">total_frames</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_COUNT</span><span class="p">))</span>    
+
+    <span class="n">MAX_CONSECUTIVE_ERRORS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fps</span> <span class="o">*</span> <span class="n">MAX_GAP_SECONDS</span><span class="p">)</span> <span class="c1"># numero massimo di errori consecutivi</span>
+
+    <span class="k">with</span> <span class="n">mp</span><span class="o">.</span><span class="n">solutions</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">Pose</span><span class="p">(</span><span class="n">static_image_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">pose</span><span class="p">:</span>    
+        <span class="k">for</span> <span class="n">frame_number</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">total_frames</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Processing frames&quot;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">ret</span><span class="p">:</span>
+                    <span class="n">total_frame_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">consecutive_frame_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">total_frame_error_count</span> <span class="o">&gt;</span> <span class="n">total_frames</span> <span class="o">*</span> <span class="n">MAX_TOTAL_ERRORS_PERCENTAGE</span> <span class="ow">or</span> <span class="n">consecutive_frame_error_count</span> <span class="o">&gt;</span> <span class="n">MAX_CONSECUTIVE_ERRORS</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore: Troppi frame illegibili&quot;</span><span class="p">)</span>
+                        <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">StatusCode</span><span class="o">.</span><span class="n">TOO_MANY_MISSING_FRAMES</span><span class="p">)</span>  <span class="c1"># Troppi frame illeggibili</span>
+                    <span class="k">continue</span>
+
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">extract_frame_opencv</span><span class="p">(</span><span class="n">cap</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Errore: Frame </span><span class="si">{</span><span class="n">frame_number</span><span class="si">}</span><span class="s2"> non trovato in </span><span class="si">{</span><span class="n">video_path</span><span class="si">}</span><span class="s2"> (opencv)&quot;</span><span class="p">)</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="n">extract_frame_ffmpeg</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">total_frame_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="n">consecutive_frame_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="k">if</span> <span class="n">total_frame_error_count</span> <span class="o">&gt;</span> <span class="n">total_frames</span> <span class="o">*</span> <span class="n">MAX_TOTAL_ERRORS_PERCENTAGE</span> <span class="ow">or</span> <span class="n">consecutive_frame_error_count</span> <span class="o">&gt;</span> <span class="n">MAX_CONSECUTIVE_ERRORS</span><span class="p">:</span>
+                            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore: Troppi frame illegibili&quot;</span><span class="p">)</span>
+                            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+                            <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">StatusCode</span><span class="o">.</span><span class="n">TOO_MANY_MISSING_FRAMES</span><span class="p">)</span>  <span class="c1"># Troppi frame illeggibili</span>
+                        <span class="k">continue</span>
+
+                <span class="n">keypoints</span> <span class="o">=</span> <span class="n">extract_keypoints_from_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame_number</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="n">pose</span><span class="p">)</span>
+
+                <span class="c1"># Controlla se tutti i valori sono 0</span>
+                <span class="n">keypoints_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;frame&#39;</span><span class="p">,</span><span class="s1">&#39;timestamp&#39;</span><span class="p">,</span><span class="s1">&#39;fps&#39;</span><span class="p">)]</span>
+                <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">v</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keypoints_values</span><span class="p">):</span>
+                    <span class="n">consecutive_frame_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">consecutive_frame_error_count</span> <span class="o">&gt;</span> <span class="n">MAX_CONSECUTIVE_ERRORS</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore: Troppi frame illegibili&quot;</span><span class="p">)</span>
+                        <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">StatusCode</span><span class="o">.</span><span class="n">TOO_MANY_MISSING_FRAMES</span><span class="p">)</span>  <span class="c1"># Troppi frame illeggibili</span>
+                    <span class="k">continue</span>
+
+                <span class="n">consecutive_frame_error_count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># resetta il contatore se i keypoints sono validi</span>
+
+                <span class="n">output_image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">video_frames_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;frame_</span><span class="si">{</span><span class="n">frame_number</span><span class="si">:</span><span class="s2">05d</span><span class="si">}</span><span class="s2">.jpg&quot;</span><span class="p">)</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">output_image_path</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Errore: impossibile salvare frame </span><span class="si">{</span><span class="n">frame_number</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">output_image_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tipo frame: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span><span class="si">}</span><span class="s2">, shape: </span><span class="si">{</span><span class="kc">None</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="kc">None</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Frame salvato: </span><span class="si">{</span><span class="n">output_image_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="n">buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span>
+
+                <span class="c1"># Scrive ogni BATCH_SIZE righe</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">BATCH_SIZE</span><span class="p">:</span>
+                    <span class="n">save_keypoints_list_to_csv</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">output_temp_csv</span><span class="p">)</span>
+                    <span class="n">buffer</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># svuota il buffer</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore generico durante l&#39;elaborazione del frame:&quot;</span><span class="p">)</span>
+                <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>  <span class="c1"># stampa il traceback completo</span>
+                <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">StatusCode</span><span class="o">.</span><span class="n">GENERIC_ERROR</span><span class="p">)</span>  <span class="c1"># Errore generico</span>
+
+    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+
+    <span class="c1"># Scrive gli eventuali dati rimanenti</span>
+    <span class="k">if</span> <span class="n">buffer</span><span class="p">:</span>
+        <span class="n">save_keypoints_list_to_csv</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">output_temp_csv</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">StatusCode</span><span class="o">.</span><span class="n">OK</span><span class="p">)</span>  <span class="c1"># Successo</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.save_keypoints_list_to_csv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">save_keypoints_list_to_csv</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Salva una lista di keypoints in un file CSV.</p>
+<p>La funzione filtra i keypoints con tutti i valori a 0 (escludendo 'id' e 'class')
+e li salva in un file CSV. Se il file esiste già, carica i dati esistenti e li
+aggiunge ai nuovi dati.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints_list</code>
+            </td>
+            <td>
+                  <code><span title="list">list</span>[<span title="dict">dict</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Lista di dizionari contenenti le coordinate dei keypoints.
+Ogni dizionario deve contenere le chiavi 'id', 'class' e le coordinate dei keypoints.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_csv</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del file CSV di output.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_keypoints_list_to_csv</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">):</span>    
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Salva una lista di keypoints in un file CSV.</span>
+
+<span class="sd">    La funzione filtra i keypoints con tutti i valori a 0 (escludendo &#39;id&#39; e &#39;class&#39;)</span>
+<span class="sd">    e li salva in un file CSV. Se il file esiste già, carica i dati esistenti e li</span>
+<span class="sd">    aggiunge ai nuovi dati.</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        keypoints_list (list[dict]): Lista di dizionari contenenti le coordinate dei keypoints.</span>
+<span class="sd">            Ogni dizionario deve contenere le chiavi &#39;id&#39;, &#39;class&#39; e le coordinate dei keypoints.</span>
+<span class="sd">        output_csv (str): Percorso del file CSV di output.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">keypoints_list</span><span class="p">:</span>
+        <span class="k">return</span>  <span class="c1"># Evita di scrivere se la lista è vuota</span>
+
+    <span class="n">file_exists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">output_csv</span><span class="p">)</span>
+
+    <span class="c1"># Usa i fieldnames dal primo dizionario della lista</span>
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_exists</span><span class="p">:</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">keypoints</span> <span class="ow">in</span> <span class="n">keypoints_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_all_keypoints_zero</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>
+                <span class="k">continue</span>  <span class="c1"># Salta righe con tutti i keypoints a 0.0</span>
+
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.save_keypoints_list_to_json" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">save_keypoints_list_to_json</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">,</span> <span class="n">output_json</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Salva una lista di keypoints in un file JSON.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints_list</code>
+            </td>
+            <td>
+                  <code><span title="list">list</span>[<span title="dict">dict</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Lista di dizionari contenenti le coordinate dei keypoints.
+Ogni dizionario deve contenere le chiavi 'id', 'class' e le coordinate dei keypoints.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_json</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del file JSON di output.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_keypoints_list_to_json</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">,</span> <span class="n">output_json</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Salva una lista di keypoints in un file JSON.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints_list (list[dict]): Lista di dizionari contenenti le coordinate dei keypoints.</span>
+<span class="sd">            Ogni dizionario deve contenere le chiavi &#39;id&#39;, &#39;class&#39; e le coordinate dei keypoints.</span>
+<span class="sd">        output_json (str): Percorso del file JSON di output.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">keypoints_list</span><span class="p">:</span>
+        <span class="k">return</span>  <span class="c1"># Evita di scrivere se la lista è vuota</span>
+
+    <span class="c1"># Filtra i keypoints con tutti i valori a 0 (escludendo &#39;id&#39; e &#39;class&#39;)</span>
+    <span class="n">keypoints_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">kp</span> <span class="k">for</span> <span class="n">kp</span> <span class="ow">in</span> <span class="n">keypoints_list</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">is_all_keypoints_zero</span><span class="p">(</span><span class="n">kp</span><span class="p">)]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">keypoints_list</span><span class="p">:</span>
+        <span class="k">return</span>  <span class="c1"># Evita di salvare se tutti erano nulli</span>
+
+    <span class="c1"># Se il file esiste già, carica i dati esistenti</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_json</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_json</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">existing_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">existing_data</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Aggiungi i nuovi dati</span>
+    <span class="n">existing_data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">keypoints_list</span><span class="p">)</span>
+
+    <span class="c1"># Scrivi tutto nel file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_json</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">existing_data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_extract.save_keypoints_to_csv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">save_keypoints_to_csv</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Salva i keypoints in un file csv.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>keypoints</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con i keypoints estratti</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_csv</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del file csv dove salvare i keypoints</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_extract.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_keypoints_to_csv</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Salva i keypoints in un file csv.</span>
+
+<span class="sd">    Args: </span>
+<span class="sd">        keypoints (dict): Dizionario con i keypoints estratti</span>
+<span class="sd">        output_csv (str): Percorso del file csv dove salvare i keypoints</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_exists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">output_csv</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+
+        <span class="c1"># Scrivi l&#39;header solo la prima volta</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_exists</span><span class="p">:</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+
+        <span class="n">row</span> <span class="o">=</span> <span class="p">{</span><span class="n">field</span><span class="p">:</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fieldnames</span><span class="p">}</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="extractkp.extraction.kp_save"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_save.save_full_keypoints_to_csv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">save_full_keypoints_to_csv</span><span class="p">(</span><span class="n">input_csv</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Salva i keypoints estratti da un file csv in un nuovo file csv.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>input_csv</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del file csv contenente i keypoints</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_csv</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Percorso del nuovo file csv contenente i keypoints</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_save.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_full_keypoints_to_csv</span><span class="p">(</span><span class="n">input_csv</span><span class="p">,</span> <span class="n">output_csv</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Salva i keypoints estratti da un file csv in un nuovo file csv.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_csv (str): Percorso del file csv contenente i keypoints</span>
+<span class="sd">        output_csv (str): Percorso del nuovo file csv contenente i keypoints</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">metadati_temporali</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="c1"># --- metadati temporali ---</span>
+        <span class="s1">&#39;frame&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;timestamp&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;fps&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;mean_visibility&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Definizione dei nomi dei keypoints</span>
+    <span class="n">keypoint_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;nose_x&#39;</span><span class="p">,</span> <span class="s1">&#39;nose_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;neck_x&#39;</span><span class="p">,</span> <span class="s1">&#39;neck_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RShoulder_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RShoulder_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RElbow_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RElbow_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RWrist_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RWrist_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LShoulder_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LShoulder_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LElbow_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LElbow_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LWrist_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LWrist_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RHip_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RHip_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RKnee_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RKnee_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RAnkle_x&#39;</span><span class="p">,</span> <span class="s1">&#39;RAnkle_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LHip_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LHip_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LKnee_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LKnee_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LAnkle_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LAnkle_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;REye_x&#39;</span><span class="p">,</span> <span class="s1">&#39;REye_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LEye_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LEye_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;REar_x&#39;</span><span class="p">,</span> <span class="s1">&#39;REar_y&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LEar_x&#39;</span><span class="p">,</span> <span class="s1">&#39;LEar_y&#39;</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Definizione degli angoli da salvare</span>
+    <span class="n">angle_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;flessione_ginocchio_dx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flessione_ginocchio_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flessione_anca_dx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flessione_anca_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flessione_gomito_dx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flessione_gomito_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;abduzione_spalla_dx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;abduzione_spalla_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;inclinazione_collo&quot;</span>
+    <span class="p">]</span>
+
+    <span class="n">ampiezza_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;ampiezza_falcata&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;lunghezza_passo&#39;</span>
+    <span class="p">]</span>
+
+    <span class="n">simmetry_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;asimmetria_flessione_ginocchio_dx_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;asimmetria_flessione_anca_dx_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;asimmetria_flessione_gomito_dx_sx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;asimmetria_abduzione_spalla_dx_sx&quot;</span>
+    <span class="p">]</span>
+
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">(</span><span class="n">metadati_temporali</span>
+                <span class="o">+</span> <span class="n">keypoint_fields</span> 
+                <span class="o">+</span> <span class="n">angle_fields</span> 
+                <span class="o">+</span> <span class="n">ampiezza_fields</span> 
+                <span class="o">+</span> <span class="n">simmetry_fields</span><span class="p">)</span> <span class="c1"># + [&quot;pathology&quot;]</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_csv</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">keypoints_raw</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;nan&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="n">angoli</span> <span class="o">=</span> <span class="n">calcola_angoli</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">)</span>
+            <span class="n">falcata</span> <span class="o">=</span> <span class="n">calcola_ampiezza_falcata</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">)</span>
+            <span class="n">passo</span> <span class="o">=</span> <span class="n">calcola_lunghezza_passo</span><span class="p">(</span><span class="n">keypoints_raw</span><span class="p">)</span>
+
+            <span class="c1"># Calcolo simmetria riga per riga (valore assoluto differenza dx - sx)</span>
+            <span class="n">simmetria</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;asimmetria_flessione_ginocchio_dx_sx&quot;</span><span class="p">:</span> <span class="n">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span> <span class="s2">&quot;flessione_ginocchio_dx&quot;</span><span class="p">,</span> <span class="s2">&quot;flessione_ginocchio_sx&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;asimmetria_flessione_anca_dx_sx&quot;</span><span class="p">:</span> <span class="n">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span> <span class="s2">&quot;flessione_anca_dx&quot;</span><span class="p">,</span> <span class="s2">&quot;flessione_anca_sx&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;asimmetria_flessione_gomito_dx_sx&quot;</span><span class="p">:</span> <span class="n">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span> <span class="s2">&quot;flessione_gomito_dx&quot;</span><span class="p">,</span> <span class="s2">&quot;flessione_gomito_sx&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;asimmetria_abduzione_spalla_dx_sx&quot;</span><span class="p">:</span> <span class="n">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span> <span class="s2">&quot;abduzione_spalla_dx&quot;</span><span class="p">,</span> <span class="s2">&quot;abduzione_spalla_sx&quot;</span><span class="p">),</span>
+            <span class="p">}</span>
+
+            <span class="c1"># Composizione riga finale</span>
+            <span class="n">output_row</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="c1"># Aggiunta metadati se esistono</span>
+            <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">metadati_temporali</span><span class="p">:</span>
+                <span class="n">output_row</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+            <span class="n">output_row</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">field</span><span class="p">:</span> <span class="n">keypoints_raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">keypoint_fields</span><span class="p">})</span>
+            <span class="n">output_row</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">field</span><span class="p">:</span> <span class="n">angoli</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">angle_fields</span><span class="p">})</span>
+            <span class="n">output_row</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;ampiezza_falcata&quot;</span><span class="p">:</span> <span class="n">falcata</span><span class="p">,</span> <span class="s2">&quot;lunghezza_passo&quot;</span><span class="p">:</span> <span class="n">passo</span><span class="p">})</span>
+            <span class="n">output_row</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">simmetria</span><span class="p">)</span>
+            <span class="c1">#output_row.update({&quot;pathology&quot;: pathology})</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">output_row</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="extractkp.extraction.kp_simmetry"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="extractkp.extraction.kp_simmetry.calcolo_simmetrie" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">sx</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calcola la simmetria tra due angoli</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>angoli</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dizionario con gli angoli estratti</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dx</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Nome dell'angolo destro</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>sx</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Nome dell'angolo sinistro</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valore della simmetria tra i due angoli</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>extractkp\extraction\kp_simmetry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcolo_simmetrie</span><span class="p">(</span><span class="n">angoli</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">sx</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcola la simmetria tra due angoli</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        angoli (dict): Dizionario con gli angoli estratti</span>
+<span class="sd">        dx (str): Nome dell&#39;angolo destro</span>
+<span class="sd">        sx (str): Nome dell&#39;angolo sinistro</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): Valore della simmetria tra i due angoli</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angoli</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">angoli</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">sx</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

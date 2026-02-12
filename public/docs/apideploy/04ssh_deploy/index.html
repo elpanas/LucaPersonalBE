@@ -715,6 +715,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH e deploy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -731,6 +749,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-generare-coppia-chiavi-ssh-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Generare coppia chiavi SSH (locale)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installare-la-chiave-pubblica-sul-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Installare la chiave pubblica sul server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configurare-github-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Configurare GitHub Secrets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1080,6 +1150,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-generare-coppia-chiavi-ssh-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Generare coppia chiavi SSH (locale)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installare-la-chiave-pubblica-sul-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Installare la chiave pubblica sul server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configurare-github-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Configurare GitHub Secrets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1096,6 +1207,66 @@
 
 
 <h1 id="ssh-deploy">SSH &amp; Deploy</h1>
+<h2 id="1-generare-coppia-chiavi-ssh-locale">1 Generare coppia chiavi SSH (locale)</h2>
+<p>Sul proprio PC:</p>
+<pre><code class="language-bash">ssh-keygen -t ed25519 -f chiave_rehab
+</code></pre>
+<p>Verranno creati:</p>
+<pre><code>chiave_rehab      # chiave privata
+chiave_rehab.pub  # chiave pubblica
+</code></pre>
+<p>Lasciare passphrase vuota per CI/CD automatico.</p>
+<hr />
+<h2 id="2-installare-la-chiave-pubblica-sul-server">2 Installare la chiave pubblica sul server</h2>
+<p>Accedere al server e passare all’utente di deploy:</p>
+<pre><code class="language-bash">su - developer
+mkdir -p ~/.ssh
+nano ~/.ssh/authorized_keys
+</code></pre>
+<p>Incollare il contenuto di:</p>
+<pre><code>chiave_rehab.pub
+</code></pre>
+<p>Impostare i permessi corretti:</p>
+<pre><code class="language-bash">chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+</code></pre>
+<hr />
+<h2 id="3-configurare-github-secrets">3 Configurare GitHub Secrets</h2>
+<p>Percorso:</p>
+<p>Repository → Settings → Secrets and variables → Actions</p>
+<p>Creare:</p>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Valore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SERVER_HOST</td>
+<td>IP del server</td>
+</tr>
+<tr>
+<td>SERVER_USERNAME</td>
+<td>developer</td>
+</tr>
+<tr>
+<td>SERVER_SSH_KEY</td>
+<td>contenuto chiave privata</td>
+</tr>
+<tr>
+<td>SERVER_SSH_PORT</td>
+<td>22 o porta personalizzata</td>
+</tr>
+</tbody>
+</table>
+<p>La chiave privata deve includere:</p>
+<pre><code>-----BEGIN OPENSSH PRIVATE KEY-----
+...
+-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+<hr />
 <p>Connessione al server tramite SSH.</p>
 <pre><code class="language-yaml">- name: Connetti via SSH e deploya
   uses: appleboy/ssh-action@v0.1.10
@@ -1103,6 +1274,7 @@
     host: ${{ secrets.SERVER_HOST }}
     username: ${{ secrets.SERVER_USERNAME }}
     key: ${{ secrets.SERVER_SSH_KEY }}
+    port: ${{ secrets.SERVER_SSH_PORT }}
     envs: APP_NAME,APP_PATH,SERVICES,GIT_REPO,VOLUMES,HEALTHCHECK_TIMEOUT
     script: |
       set -e
@@ -1113,16 +1285,6 @@
       cd &quot;$APP_PATH&quot;
       mkdir -p logs backups
       LOGFILE=&quot;logs/deploy_$(date +%Y%m%d_%H%M%S).log&quot;
-</code></pre>
-<p>Prepara le variabili, le cartelle di log e backup.</p>
-<pre><code class="language-bash">    set -e
-    echo &quot;=== Deploy iniziato: $(date) ===&quot;
-    BRANCH=&quot;${{ github.ref_name }}&quot;
-    IFS=',' read -ra SERVICES &lt;&lt;&lt; &quot;$SERVICES&quot;
-    IFS=',' read -ra VOLUMES &lt;&lt;&lt; &quot;$VOLUMES&quot;
-    cd &quot;$APP_PATH&quot;
-    mkdir -p logs backups
-    LOGFILE=&quot;logs/deploy_$(date +%Y%m%d_%H%M%S).log&quot;
 </code></pre>
 
 

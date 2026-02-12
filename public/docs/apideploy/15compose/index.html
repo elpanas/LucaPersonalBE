@@ -12,6 +12,8 @@
         <link rel="prev" href="../14caddy/">
       
       
+        <link rel="next" href="../16dev/">
+      
       
         
       
@@ -1049,6 +1051,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ambiente gemello dev
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1192,6 +1222,15 @@ Il comando <code>restart</code> riavvia il servizio in caso di errore a meno che
     networks:
       - kpnet    
     restart: unless-stopped
+</code></pre>
+<p>Alla rete è stato specificato l'indirizzo parziale della subnet, in modo da assicurare l'accesso da e per servizi esterni (come MySQL):</p>
+<pre><code class="language-yaml">networks: 
+  kpnet: # rete interna tra container
+    driver: bridge # i container possono comunicare tra loro usando il nome del servizio come hostname
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
 </code></pre>
 
 

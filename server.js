@@ -10,6 +10,7 @@ const cors = require('cors');
 const config = require('./config/config'); // CONFIGURATIONS
 const restcomment = require('./routes/restcomment'); // ROUTES
 const authroute = require('./routes/authroute');
+const skillroute = require('./routes/skillsRoute');
 
 // MIDDLEWARE APPLICATIONS
 app.use(helmet());
@@ -23,16 +24,13 @@ app.use('/docs', express.static(path.join(__dirname, 'public/docs')));
 // ROUTES
 app.use('/api/login', authroute);
 app.use('/api/comment', restcomment);
+app.use('/api/skill', skillroute);
 
 // Normalizza /docs → /docs/
-app.get('/docs', (req, res) => {
-  res.redirect('/docs/');
-});
+app.get('/docs', (req, res) => res.redirect('/docs/'));
 
 // SPA fallback
-app.get('/docs/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/docs/index.html'));
-});
+app.get('/docs/*', (req, res) => res.sendFile(path.join(__dirname, 'public/docs/index.html')));
 
 // in case of web request
 app.get('/', (req, res) => res.send("Luca's Personal Page Web Service"));

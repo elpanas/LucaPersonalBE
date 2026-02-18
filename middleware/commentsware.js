@@ -1,4 +1,4 @@
-const { Comment } = require('../models/schemas');
+const Comment = require('../models/comment');
 
 // CREATE USER
 module.exports = {

@@ -1,4 +1,4 @@
-const { Skill } = require('../models/skill');
+const Skill = require('../models/skill');
 
 // CREATE USER
 module.exports = {
